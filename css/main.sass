@@ -1,10 +1,12 @@
-/* Спецификация */
-body
-  font-family: 'PT Sans', sans-serif
+/* Main settings */
+$font-stack: PT Sans, sans-serif
 
-%h-settings
-  font-weight: 700
-  color: #000
+$yellow-color: #fcdb00
+
+$black-color: #000
+
+body
+  font-family: $font-stack
 
 %disp-settings
   display: block
@@ -17,37 +19,18 @@ ul
 li
   @extend %disp-settings
 
-h1
-  @extend %h-settings
-
-h2
-  @extend %h-settings
-  text-align: center
+h1, h2, h3, h4, h5
+  font-weight: 700
+  color: $black-color
 
 h3
-  @extend %h-settings
   font-weight: 400
 
-h4
-  @extend %h-settings
+h2
+  text-align: center
 
-h5
-  @extend %h-settings
-
-%height
+p, div, span, a
   line-height: 1.3em
-
-p
- @extend %height
-
-div
-  @extend %height
-
-span
-  @extend %height
-
-a
-  @extend %height
 
 .title
   padding-top: 100px
@@ -63,11 +46,11 @@ a
   margin: 0 auto
 
 .yeloww
-  color: #fcdb00
+  color: $yellow-color
 
-/* 1st panel */
+/* Header */
 .header
-  background: #fcdb00
+  background: $yellow-color
   color: #010101
   padding-top: 58px
   padding-bottom: 105px
@@ -82,7 +65,7 @@ a
   a
     font-size: 22px
     font-weight: 700
-    color: #000
+    color: $black-color
 
 .offer
   margin-top: 117px
@@ -106,7 +89,7 @@ a
 
 .icons__item
   a
-    color: #000
+    color: $black-color
     font-size: 42px
     transition: all 0.3s ease
 
@@ -118,3 +101,92 @@ a
 .ipad
   display: block
   margin: 60px auto
+
+/* Section features */
+
+.feature__icon
+  font-size: 50px
+  margin-right: 37px
+  color: $black-color
+
+.feature
+  margin-bottom: 60px
+
+.feature__text
+  color: #898989
+
+/* Section touch*/
+.touch
+  background: black
+  color: #fff
+
+.form
+  text-align: center
+
+.form__input
+  background: #fff
+  font-size: 16px
+  font-family: $font-stack
+  border-radius: 5px
+  width: 500px
+  padding: 15px 0
+  margin-right: 21px
+  border: 0
+  padding-left: 23px
+  outline: none
+
+.form__btn
+  font-family: $font-stack
+  background: $yellow-color
+  color: $black-color
+  text-transform: uppercase
+  font-size: 16px
+  font-weight: 700px
+  border-radius: 5px
+  width: 126px
+  border: 0
+  padding: 14px 0
+  cursor: pointer
+
+/* footer */
+.footer
+  background: $black-color
+  padding: 50px 0 94px
+
+.credits
+  color: #fff
+  font-size: 16px
+  text-align: center
+  width: 184px
+  margin: 0 auto
+
+/* Mediazapros */
+@media screen and (max-width: 992px)
+  .logo
+    display: block
+    margin: 0 auto
+    margin-bottom: 30px
+  .offer
+    text-align: center
+  .offer__text
+    margin: 20px auto
+    width: auto
+  .icons
+    justify-content: center
+  .icons__item:nth-child(3)
+    margin-right: 0
+  .form__input
+    margin-right: 0
+    width: 100%
+  .form__btn
+    margin-top: 10px
+    width: 100%
+  .title__text
+    width: auto
+
+@media screen and (max-width: 576px)
+  .ipad
+    width: 100%
+  .menu
+    flex-direction: column
+    margin-bottom: 10px
