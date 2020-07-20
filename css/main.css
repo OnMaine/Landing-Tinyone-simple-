@@ -1,5 +1,4 @@
-/* Main settings */
-body {
+/* Main settings */ body {
   font-family: PT Sans, sans-serif;
 }
 
@@ -214,6 +213,7 @@ p, div, span, a {
     width: auto;
   }
 }
+
 @media screen and (max-width: 576px) {
   .ipad {
     width: 100%;
